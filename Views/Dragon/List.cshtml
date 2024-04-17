@@ -1,0 +1,29 @@
+@model IEnumerable<midterm_project.Models.Dragon>
+
+@{
+    ViewData["Title"] = "Nest";
+}
+
+
+<div class="container">
+    <div class="row">
+        @foreach (var dragon in Model ?? new List<Dragon>())
+        {
+            <div class="card" style="width: 18rem;">
+            <img src="@dragon.ImgUrl" class="card-img-top" alt="Dragon.img">
+            
+            <div class="card-body">
+                <h5 class="card-title">@dragon.Name</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Age: @dragon.Age</h6>
+                <a class="btn btn-dark" asp-controller="Dragon" asp-action="Detail" asp-route-id="@dragon.Id">Details</a>
+                <a class="btn btn-warning" asp-controller="Dragon" asp-action="Edit" asp-route-id="@dragon.Id">Edit</a>
+                <a class="btn btn-danger" asp-controller="Dragon" asp-action="Delete" asp-route-id="@dragon.Id">Delete</a>
+            </div>
+            </div>
+        }
+        <a class="btn btn-dark" asp-controller="Dragon" asp-action="Add" >Create Dragon</a>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,14 @@
+@model midterm_project.Models.Dragon
+
+<div class="container">
+    <form asp-controller="Dragon" asp-action="Edit" method="post">
+        <h1 class="diplay-4 text-center mb-5">Update Dragon</h1>
+
+            @await Html.PartialAsync("_DragonInput", Model)
+
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" class="btn btn-sm btn-success float-end" value="Save">
+        <a class="btn btn-dark" asp-controller="Dragon" asp-action="List">Back</a>
+        <a class="btn btn-danger" asp-controller="Dragon" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+    </form>
+</div>

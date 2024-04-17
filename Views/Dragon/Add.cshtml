@@ -1,0 +1,17 @@
+@model midterm_project.Models.Dragon
+
+@{
+    ViewData["Title"] = "Add Job";
+}
+
+<div class="container text-center">
+    <form asp-controller="Dragon" asp-action="Add" method="post">
+        <h1 class="display-4 mb-5">Add New Dragon</h1>
+
+        @await Html.PartialAsync("_DragonInput", Model)
+
+        <input type="submit" class="btn btn-sm btn-success" value="Save">
+    </form>
+
+    <a class="btn btn-sm btn-dark" asp-controller="Dragon" asp-action="List">Back</a>
+</div>

@@ -1,0 +1,35 @@
+@model midterm_project.Models.Dragon;
+
+<div class="form-group">
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="Name"></label>
+        <input class="form-control col-md-8" asp-for="Name" />
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="Name"></span>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="ImgUrl"></label>
+        <input class="form-control col-md-8" asp-for="ImgUrl" />
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="ImgUrl"></span>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="Description"></label>
+        <input class="form-control col-md-8" asp-for="Description" />
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="Description"></span>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <label class="control-label col-md-4" asp-for="Age"></label>
+        <input class="form-control col-md-8" asp-for="Age" />
+        <div class="col-10 offset-md-1 text-danger text-right">
+            <span asp-validation-for="Age"></span>
+        </div>
+    </div>
+</div>
